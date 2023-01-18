@@ -6,6 +6,9 @@ from finite_differences import METHODS
 XMIN, XMAX, J = -5, 5, 100
 DX = (XMAX-XMIN)/J
 
+MPL_THEME = "./mpl-styles/dark.mplstyle"
+plt.style.use(MPL_THEME)
+
 
 def plot_1(x, f):
     y = f(x)
