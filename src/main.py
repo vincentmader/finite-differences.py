@@ -25,6 +25,7 @@ def plot_1(x, f):
 
 def plot_2(x, f):
     y = f(x)
+    plt.plot(x, y - y, label="exponential")
     for (label, method) in METHODS:
         X, Y = method(x, y, DX)
         err = Y - f(X)
