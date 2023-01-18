@@ -1,3 +1,5 @@
+import os
+
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -20,6 +22,8 @@ def plot_1(x, f):
     plt.ylabel("$f(x)$")
     plt.legend(loc="upper left")
     plt.title("comparison of 1st order finite difference schemes")
+    path = os.path.join("..", "out", "fd-comparison.png")
+    plt.savefig(path)
     plt.show()
 
 
@@ -34,6 +38,8 @@ def plot_2(x, f):
     plt.ylabel("error $f_{num}(x) - f(x)$")
     plt.legend(loc="upper left")
     plt.title("comparison of 1st order finite difference scheme error")
+    path = os.path.join("..", "out", "fd-errors.png")
+    plt.savefig(path)
     plt.show()
 
 
