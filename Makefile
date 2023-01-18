@@ -1,2 +1,4 @@
 run:
-	cd ./src && python3 ./main.py
+	cd ./bin && ./run
+setup:
+	cd ./bin && ./setup
