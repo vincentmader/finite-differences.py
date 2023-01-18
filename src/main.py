@@ -20,8 +20,22 @@ def plot_1(x, f):
     plt.show()
 
 
+def plot_2(x, f):
+    y = f(x)
+    for (label, method) in METHODS:
+        X, Y = method(x, y, DX)
+        err = Y - f(X)
+        plt.plot(X, err, label=label)
+    plt.xlabel("$x$")
+    plt.ylabel("error $f_{num}(x) - f(x)$")
+    plt.legend(loc="upper left")
+    plt.title("comparison of 1st order finite difference scheme error")
+    plt.show()
+
+
 if __name__ == "__main__":
     f = np.exp
     x = np.linspace(XMIN, XMAX, J)
 
     plot_1(x, f)
+    plot_2(x, f)
