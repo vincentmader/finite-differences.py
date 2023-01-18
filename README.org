@@ -1,0 +1,25 @@
+* Finite Differences
+
+In this small python project, various different methods 
+of derivative discretization are compared.
+
+*** Setup
+To run the code, you need to have `python3` installed on your machine. 
+
+If you also have the `make` CLI tool, you can run the 
+project by executing the following two commands:
+#+begin_src
+make setup
+make fd
+#+end_src
+
+If you don't, you can also navigate to the `./bin/` 
+directory and execute the two binaries manually from there.
+#+begin_src
+cd ./bin
+./setup
+./run
+#+end_src
+
+[[./out/fd-comparison.png]]
+[[./out/fd-errors.png]]
