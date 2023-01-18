@@ -3,7 +3,7 @@ import numpy as np
 
 from finite_differences import METHODS
 
-XMIN, XMAX, J = -5, 5, 100
+XMIN, XMAX, J = -0, 10, 100
 DX = (XMAX-XMIN)/J
 
 MPL_THEME = "./mpl-styles/dark.mplstyle"
