@@ -22,4 +22,5 @@ cd ./bin
 #+end_src
 
 [[./out/fd-comparison.png]]
-[[./out/fd-errors.png]]
+[[./out/fd-errors-vs-x.png]]
+[[./out/fd-errors-vs-h.png]]
