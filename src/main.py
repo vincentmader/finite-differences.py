@@ -16,8 +16,8 @@ def plot_1(x, f):
     y = f(x)
     plt.plot(x, y, label="exponential")
     for (label, method) in METHODS:
-        X, Y = method(x, y, DX)
-        plt.plot(X, Y, label=label)
+        Y = method(x, f, DX)
+        plt.plot(x, Y, label=label)
     plt.xlabel("$x$")
     plt.ylabel("$f(x)$")
     plt.legend(loc="upper left")
@@ -31,9 +31,9 @@ def plot_2(x, f):
     y = f(x)
     plt.plot(x, y - y, label="exponential")
     for (label, method) in METHODS:
-        X, Y = method(x, y, DX)
-        err = Y - f(X)
-        plt.plot(X, err, label=label)
+        Y = method(x, f, DX)
+        err = Y - f(x)
+        plt.plot(x, err, label=label)
     plt.xlabel("$x$")
     plt.ylabel("error $f_{num}(x) - f(x)$")
     plt.legend(loc="upper left")

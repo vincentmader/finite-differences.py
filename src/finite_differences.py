@@ -1,34 +1,13 @@
-import numpy as np
+def first_order_forward(x, f, h):
+    return (f(x+h) - f(x)) / h
 
 
-def first_order_forward(x, y, h):
-    ydot = []
-    for i, _ in enumerate(x):
-        if i+1 >= len(y):
-            continue
-        y_i = (y[i+1] - y[i]) / h
-        ydot = np.append(ydot, y_i)
-    return x[:-1], ydot
+def first_order_backward(x, f, h):
+    return (f(x) - f(x-h)) / h
 
 
-def first_order_backward(x, y, h):
-    ydot = []
-    for i, _ in enumerate(x):
-        if i-1 < 0:
-            continue
-        y_i = (y[i] - y[i-1]) / h
-        ydot = np.append(ydot, y_i)
-    return x[1:], ydot
-
-
-def first_order_central(x, y, h):
-    ydot = []
-    for i, _ in enumerate(x):
-        if i-1 < 0 or i+1 >= len(y):
-            continue
-        y_i = (y[i+1] - y[i-1]) / (2*h)
-        ydot = np.append(ydot, y_i)
-    return x[1:-1], ydot
+def first_order_central(x, f, h):
+    return (f(x+h) - f(x-h)) / (2*h)
 
 
 METHODS = [
